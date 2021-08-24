@@ -10,25 +10,20 @@
 </head>
 
 <body>
-    <main>
-        <h1> Daily To Do Tasks</h1>
         <section class="container">
             <div class="heading-box">
                 <h3 class="container-heading">Today's To Do</h3>
                 <i class="fas fa-sync-alt"></i>
             </div>
             <div class="input-box">
-                <form class="input-form" id="my-form">
+                <form class="input-form" id="form">
                     <input type="text" class="input-task" id="task" placeholder="Add to your List...">
                     <button type="submit" class="submit-task" id="enter-task"><i class="fas fa-reply"></i></button>
                 </form>
             </div>
-            <div class="list" id="all-tasks">
-            
+            <div class="list" id="all-tasks"></div>
             <button class="btn-completed" type="button" id="all-completed">Clear all completed</button>
-            </div>
         </section>
-    </main>
     <script defer src="../dist/bundle.js"></script>
 </body>
 
