@@ -9,12 +9,12 @@ const taskList = [
     id: 0,
   },
   {
-    description: 'Start working 9 am',
+    description: 'Start working at 9 am',
     completed: false,
     id: 1,
   },
   {
-    description: 'Drink coffe 9:30',
+    description: 'Drink coffe at 9:30',
     completed: false,
     id: 2,
   },
