@@ -2,7 +2,7 @@
 
 In this project, I build a simple HTML list of To Do tasks.This simple web page is built using webpack and served by a webpack dev server.
 
-![image](![image](https://user-images.githubusercontent.com/74506933/130815468-ed0818d7-5009-4f67-946a-e7be9109be7e.png))
+![image](![image](https://user-images.githubusercontent.com/74506933/130815468-ed0818d7-5009-4f67-946a-e7be9109be7e.png)
 
 ## Built With
 
