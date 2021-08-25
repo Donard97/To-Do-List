@@ -10,7 +10,7 @@ body {
   width: 40%;
   margin: 5%  auto;
   background-color: white;
-  box-shadow: rgba(255, 255, 255, 0.836) 0 8px 24px;
+  box-shadow: rgba(75, 71, 71, 0.836) 0 8px 24px;
   border-radius: 2%;
 }
 
@@ -70,7 +70,7 @@ body {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid black;
-  padding: 15px 10px;
+  padding: 20px 10px;
 }
 
 .group-list {
