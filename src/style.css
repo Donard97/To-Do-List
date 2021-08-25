@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
-  background-color: grey;
+  background-color: #d5cdcd;
 }
 
 .container {
@@ -27,7 +27,7 @@ body {
 }
 
 .input-form .input-task {
-  border: none;
+  border: none !important;
   font-size: 18px;
   outline: none;
 }
@@ -43,7 +43,7 @@ body {
   border: none;
   font-size: 20px;
   cursor: pointer;
-  color: grey;
+  color: #5b5a5a;
   background: #f2f2f2;
   line-height: 52px;
   margin-top: -8px;
@@ -69,6 +69,8 @@ body {
 .eachTask {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 15px 10px;
 }
 
 .group-list {
@@ -83,4 +85,9 @@ body {
 
 .task-name {
   padding: 0 10px;
+}
+
+.group-list .form-label {
+  font-size: 20px;
+  padding-left: 8px;
 }
