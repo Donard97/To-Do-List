@@ -35,11 +35,22 @@ const displayTasks = () => {
     const input = document.createElement('input');
     input.setAttribute('type', 'checkbox');
     input.setAttribute('class', 'check-box');
-    input.id = each.id;
-    input.checked = each.completed;
-    input.addEventListener('change', () => {
-      completedStatus(each, taskList);
-    });
+    if (each.completed) {
+      input.checked = true;
+      input.id = each.id;
+      input.checked = each.completed;
+      input.addEventListener('change', () => {
+        completedStatus(each, taskList);
+      });
+      localStorage.setItem('taskList', JSON.stringify(taskList));
+    } else {
+      input.id = each.id;
+      input.checked = each.completed;
+      input.addEventListener('change', () => {
+        completedStatus(each, taskList);
+      });
+      localStorage.setItem('taskList', JSON.stringify(taskList));
+    }
 
     list.appendChild(input);
 
