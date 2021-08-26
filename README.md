@@ -1,8 +1,7 @@
 # To-Do-List
 
 In this project, I build a simple HTML list of To Do tasks.This simple web page is built using webpack and served by a webpack dev server.
-
-![image](https://user-images.githubusercontent.com/74506933/130678732-6d31d4d9-0d1c-43f7-a523-3d090919c3a5.png)
+![image](https://user-images.githubusercontent.com/74506933/130815602-2ccfc959-bf96-4c83-9b79-92925ba57a20.png)
 
 ## Built With
 
