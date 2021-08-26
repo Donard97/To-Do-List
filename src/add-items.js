@@ -2,7 +2,7 @@
 import displayTasks from './index';
 
 const addTask = document.getElementById('task');
-const form = document.getElementById('my-form');
+const form = document.getElementById('form');
 
 const addTaskList = (taskList) => {
   const description = addTask.value;
