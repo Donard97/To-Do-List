@@ -91,4 +91,15 @@ body {
 .group-list .form-label {
   font-size: 20px;
   padding-left: 8px;
+  border: none;
+  width: 30rem;
+}
+
+.group-list .form-label:focus-visible {
+  outline: none;
+}
+
+.btn-completed:hover {
+  background: cornflowerblue;
+  color: white;
 }
