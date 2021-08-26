@@ -3,7 +3,8 @@ import completedStatus from './script';
 
 const allTasks = document.getElementById('all-tasks');
 
-const taskList = [
+// eslint-disable-next-line prefer-const
+let taskList = [
   {
     description: 'Get up at 8 am',
     completed: false,
@@ -22,51 +23,45 @@ const taskList = [
 ];
 
 const displayTasks = () => {
-  allTasks.innerHTML = '';
-  for (let i = 0; i < taskList.length; i += 1) {
-    const each = taskList[i];
+  if (localStorage.getItem('taskList') !== null) {
+    taskList = JSON.parse(localStorage.getItem('taskList'));
 
-    const eachTask = document.createElement('div');
-    eachTask.className = 'eachTask';
+    allTasks.innerHTML = '';
+    for (let i = 0; i < taskList.length; i += 1) {
+      const each = taskList[i];
 
-    const list = document.createElement('div');
-    list.className = 'group-list';
+      const eachTask = document.createElement('div');
+      eachTask.className = 'eachTask';
 
-    const input = document.createElement('input');
-    input.setAttribute('type', 'checkbox');
-    input.setAttribute('class', 'check-box');
-    if (each.completed) {
-      input.checked = true;
+      const list = document.createElement('div');
+      list.className = 'group-list';
+
+      const input = document.createElement('input');
+      input.setAttribute('type', 'checkbox');
+      input.setAttribute('class', 'check-box');
       input.id = each.id;
       input.checked = each.completed;
+      // eslint-disable-next-line no-loop-func
       input.addEventListener('change', () => {
         completedStatus(each, taskList);
       });
-      localStorage.setItem('taskList', JSON.stringify(taskList));
-    } else {
-      input.id = each.id;
-      input.checked = each.completed;
-      input.addEventListener('change', () => {
-        completedStatus(each, taskList);
-      });
-      localStorage.setItem('taskList', JSON.stringify(taskList));
+
+      list.appendChild(input);
+
+      const label = document.createElement('label');
+      label.innerHTML = `${each.description}`;
+      label.className = 'form-label';
+      list.appendChild(label);
+
+      eachTask.appendChild(list);
+
+      const button = document.createElement('button');
+      button.innerHTML = '<i class="fas fa-ellipsis-v">';
+      button.className = 'menu-icon';
+      eachTask.appendChild(button);
+
+      allTasks.appendChild(eachTask);
     }
-
-    list.appendChild(input);
-
-    const label = document.createElement('label');
-    label.innerHTML = `${each.description}`;
-    label.className = 'form-label';
-    list.appendChild(label);
-
-    eachTask.appendChild(list);
-
-    const button = document.createElement('button');
-    button.innerHTML = '<i class="fas fa-ellipsis-v">';
-    button.className = 'menu-icon';
-    eachTask.appendChild(button);
-
-    allTasks.appendChild(eachTask);
   }
 };
 
