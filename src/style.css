@@ -49,6 +49,7 @@ body {
   margin-top: -8px;
   border-bottom-left-radius: 9%;
   border-bottom-right-radius: 9%;
+  height: 80px;
 }
 
 .container .heading-box {
