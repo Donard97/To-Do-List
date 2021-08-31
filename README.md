@@ -25,12 +25,28 @@ To get a local copy up and running follow these simple example steps.
 
 Clone the repo with git clone https://github.com/Donard97/To-Do-List
 
-Open index.html using npm start .
+Start the Project `$ npm start` - serve the project in browser.
 
-## Author 
-Github : [@Donard97](https://github.com/Donard97) <br>
-Twitter: [@donardgolaj](https://twitter.com/donardgolaj) <br>
-LinkdIn : [@donard-golaj](https://www.linkedin.com/in/donard-golaj/) <br>
+If you want to test the project run `$ npm test` on terminal .
+
+Install dependencies `$ npm install`.
+
+If you want to build the project `$ npm run build` - this will build the project in /dist folder.
+
+
+## Authors
+
+👤 **Donard Golaj**
+
+- Github : [@Donard97](https://github.com/Donard97)
+- Twitter: [@donardgolaj](https://twitter.com/donardgolaj)
+- LinkdIn : [@donard-golaj](https://www.linkedin.com/in/donard-golaj/)
+
+👤 **Rustam Tolipov**
+
+- GitHub: [@githubhandle](https://github.com/Rustamxon7)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rustamjon-tolipov-6a831020b)
+
 
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
