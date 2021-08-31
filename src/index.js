@@ -58,11 +58,15 @@ const displayTasks = () => {
       trash.style.display = 'none';
       eachTask.appendChild(trash);
 
+      // eslint-disable-next-line no-loop-func
       inputLabel.addEventListener('blur', () => {
         inputLabel.style.background = '#ffffff';
         eachTask.style.background = '#ffffff';
         button.style.display = 'inline';
         trash.style.display = 'none';
+        const newValue = inputLabel.value;
+        // eslint-disable-next-line no-use-before-define
+        edit(newValue, taskList, i);
       });
 
       inputLabel.addEventListener('focus', () => {
@@ -111,6 +115,10 @@ insert.addEventListener('click', (e, taskList) => {
   e.preventDefault();
   addTaskList(taskList);
 });
+const edit = (newValue, taskList, i) => {
+  taskList[i].description = newValue;
+  localStorage.setItem('taskList', JSON.stringify(taskList));
+};
 
 export default displayTasks;
 
