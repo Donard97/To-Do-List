@@ -9,4 +9,15 @@ const removeTask = (taskList, index) => {
   return taskList;
 };
 
-export default removeTask;
+const removeCompleted = (taskList) => {
+  taskList = taskList.filter((task) => !task.completed);
+  let reset = 0;
+  taskList.forEach((task) => {
+    reset += 1;
+    task.id = reset;
+  });
+  localStorageMock.setItem('taskList', taskList);
+  return taskList;
+};
+
+export { removeTask, removeCompleted };

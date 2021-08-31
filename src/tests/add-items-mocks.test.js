@@ -20,6 +20,14 @@ describe('Add-Tasks', () => {
     expect(listTask[0].description).toBe('Get up at 8 am');
   });
 
+  it('Completed status should be false', () => {
+    expect(listTask[0].completed).toBe(false);
+  });
+
+  it('Status should be false', () => {
+    expect(listTask[0].id).toBe(1);
+  });
+
   it('add-Tasks', () => {
     expect(listTask[0]).toEqual({ description: 'Get up at 8 am', completed: false, id: 1 });
   });
